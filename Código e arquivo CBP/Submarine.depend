@@ -1,0 +1,629 @@
+# depslib dependency file v1.0
+1558550265 source:c:\users\aluno\desktop\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558550230 c:\users\aluno\desktop\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558890835 source:c:\users\pujol\documents\programacao\c\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558890835 c:\users\pujol\documents\programacao\c\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	"gstruct.h"
+
+1558890835 c:\users\pujol\documents\programacao\c\submarine\gstruct.h
+	"gfunc.h"
+
+1558709023 source:\\homes\jpricarte\documents\submarino-master\submarino-master\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558709394 \\homes\jpricarte\documents\submarino-master\submarino-master\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	"gstruct.h"
+
+1558707868 \\homes\jpricarte\documents\submarino-master\submarino-master\submarine\gstruct.h
+	"gfunc.h"
+
+1558719720 source:\\homes\aepfranz\desktop\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558720431 \\homes\aepfranz\desktop\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	"gstruct.h"
+
+1558695260 \\homes\aepfranz\desktop\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\gstruct.h
+	"gfunc.h"
+
+1558890835 source:c:\users\pujol\documents\programacao\c\submarino\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558890835 c:\users\pujol\documents\programacao\c\submarino\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	"gstruct.h"
+
+1558890835 c:\users\pujol\documents\programacao\c\submarino\submarino-jricarte-patch-1\submarino-master\submarino-master\submarine\gstruct.h
+	"gfunc.h"
+
+1558896774 source:c:\users\pujol\documents\programacao\c\submarino\submarine - copia\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+
+1558896838 c:\users\pujol\documents\programacao\c\submarino\submarine - copia\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	"gstruct.h"
+
+1558894065 c:\users\pujol\documents\programacao\c\submarino\submarine - copia\submarine\gstruct.h
+	"gfunc.h"
+
+1558902590 source:c:\users\pujol\documents\programacao\c\submarine - copia\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+
+1558902600 c:\users\pujol\documents\programacao\c\submarine - copia\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+
+1558894065 c:\users\pujol\documents\programacao\c\submarine - copia\submarine\gstruct.h
+	"gfunc.h"
+
+1561750321 source:\\homes\jpricarte\documents\submarino-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1559152942 \\homes\jpricarte\documents\submarino-master\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+	"auxFunc.h"
+
+1559154701 \\homes\jpricarte\documents\submarino-master\gstruct.h
+	"gfunc.h"
+
+1559154376 \\homes\jpricarte\documents\submarino-master\auxfunc.h
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	"gstruct.h"
+	<ctype.h>
+
+1560363208 source:\\homes\jpricarte\documents\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1560361864 \\homes\jpricarte\documents\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+	"auxFunc.h"
+
+1560191384 \\homes\jpricarte\documents\submarine\gstruct.h
+	"gfunc.h"
+
+1560363889 \\homes\jpricarte\documents\submarine\auxfunc.h
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	"gstruct.h"
+	"menu.h"
+	<ctype.h>
+
+1560194180 source:x:\documents\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+
+1560194292 x:\documents\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+	"auxFunc.h"
+
+1560191384 x:\documents\submarine\gstruct.h
+	"gfunc.h"
+
+1559156150 x:\documents\submarine\auxfunc.h
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	"gstruct.h"
+	<ctype.h>
+
+1560363281 \\homes\jpricarte\documents\submarine\menu.h
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	"auxFunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+
+1560364827 source:\\homes\jpricarte\documents\nova pasta\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1560364872 \\homes\jpricarte\documents\nova pasta\submarine\menu.h
+	<stdio.h>
+	<stdlib.h>
+	"gfunc.h"
+	"gstruct.h"
+	"auxFunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+
+1560364827 \\homes\jpricarte\documents\nova pasta\submarine\gfunc.h
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+	"auxFunc.h"
+
+1560191384 \\homes\jpricarte\documents\nova pasta\submarine\gstruct.h
+	"gfunc.h"
+
+1560363889 \\homes\jpricarte\documents\nova pasta\submarine\auxfunc.h
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	"gstruct.h"
+	"menu.h"
+	<ctype.h>
+
+1560634507 source:c:\users\pujol\documents\programacao\c\submarino\submarine\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1560630017 c:\users\pujol\documents\programacao\c\submarino\submarine\menu.h
+
+1560632617 c:\users\pujol\documents\programacao\c\submarino\submarine\gfunc.h
+	"gstruct.h"
+
+1560631239 c:\users\pujol\documents\programacao\c\submarino\submarine\gstruct.h
+
+1560632068 c:\users\pujol\documents\programacao\c\submarino\submarine\auxfunc.h
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	"gstruct.h"
+	"menu.h"
+	<ctype.h>
+
+1560632096 source:c:\users\pujol\documents\programacao\c\submarino\submarine\menu.c
+	"menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gfunc.h"
+	"gstruct.h"
+	"gFile.h"
+
+1560631093 c:\users\pujol\documents\programacao\c\submarino\submarine\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1560632457 source:c:\users\pujol\documents\programacao\c\submarino\submarine\gfunc.c
+	"gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"gstruct.h"
+	"gFile.h"
+
+1560630981 source:c:\users\pujol\documents\programacao\c\submarino\submarine\gstruct.c
+
+1560631244 source:c:\users\pujol\documents\programacao\c\submarino\submarine\gfile.c
+	"gFile.h"
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"gstruct.h"
+	"menu.h"
+
+1560631239 c:\users\pujol\documents\programacao\c\submarino\submarine\/\gstruct.h
+
+1560718232 source:c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1560719605 c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1560718737 c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\headers\gstruct.h
+
+1560634507 c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\headers\menu.h
+
+1560719606 source:c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560656192 c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1560719697 source:c:\users\pujol\documents\programacao\c\submarino\submarine\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560790853 source:c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1560790853 c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1560795273 c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gstruct.h
+
+1560790853 c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\menu.h
+
+1560796049 source:c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560791328 c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1560790854 source:c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560790853 source:c:\users\aluno\downloads\submarino-biblios-arrumadas\submarino-biblios-arrumadas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1560790853 source:\\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1560790853 \\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1560795273 \\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gstruct.h
+
+1560790853 \\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\menu.h
+
+1560877082 source:\\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560791328 \\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1560876630 source:\\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560790853 source:\\homes\aepfranz\desktop\submarino-biblios-arrumadas\submarino-biblios-arrumadas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561030605 source:c:\users\pujol\documents\programacao\c\submarino\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1560996446 c:\users\pujol\documents\programacao\c\submarino\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1560997271 c:\users\pujol\documents\programacao\c\submarino\bibliotecas\headers\gstruct.h
+
+1560996446 c:\users\pujol\documents\programacao\c\submarino\bibliotecas\headers\menu.h
+
+1561030050 source:c:\users\pujol\documents\programacao\c\submarino\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561034156 c:\users\pujol\documents\programacao\c\submarino\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561030761 source:c:\users\pujol\documents\programacao\c\submarino\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1560996446 source:c:\users\pujol\documents\programacao\c\submarino\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561400615 source:c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561400115 c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1561393615 c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\headers\gstruct.h
+
+1561393615 c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\headers\menu.h
+
+1561396129 source:c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561398422 c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561393615 source:c:\users\aluno\desktop\submarino-master\submarino-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561400171 source:c:\users\aluno\desktop\submarino-master\submarino-master\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561386830 source:\\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561386830 \\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1561386830 \\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\headers\gstruct.h
+
+1561386830 \\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\headers\menu.h
+
+1561386830 source:\\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561386830 \\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561386830 source:\\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561386830 source:\\homes\jpricarte\downloads\submarino-submarino-0.1b\submarino-submarino-0.1b\submarino-master\submarino-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561750870 source:\\homes\jpricarte\documents\submarino-master\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561747949 \\homes\jpricarte\documents\submarino-master\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1561750201 \\homes\jpricarte\documents\submarino-master\bibliotecas\headers\gstruct.h
+
+1561746197 \\homes\jpricarte\documents\submarino-master\bibliotecas\headers\menu.h
+
+1561750201 source:\\homes\jpricarte\documents\submarino-master\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561748587 \\homes\jpricarte\documents\submarino-master\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561749402 source:\\homes\jpricarte\documents\submarino-master\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
