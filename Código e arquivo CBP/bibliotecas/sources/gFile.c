@@ -148,6 +148,8 @@ int mostraRanking(FILE *arq)
         {
         case 1917:
             textcolor(RED); break;
+        case 1863:
+            textcolor(YELLOW); break;
         case 1500:
             textcolor(GREEN); break;
         }

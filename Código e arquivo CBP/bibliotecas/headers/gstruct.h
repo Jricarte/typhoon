@@ -18,7 +18,7 @@
 #define ESP 32
 
 //constantes de probabilidade e maximo de obstaculos
-#define PROB_NASCE_MERG 0.05
+#define PROB_NASCE_MERG 0.06
 #define PROBSUB 0.4
 #define MAXINIM 5
 #define NUM_MAX_MERG 5
