@@ -627,3 +627,99 @@
 	"../headers/gstruct.h"
 	"../headers/gFile.h"
 
+1561928317 source:c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561920669 c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561920669 c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\headers\gstruct.h
+
+1561934215 c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1561934133 source:c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gFile.h"
+
+1561934416 c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\headers\menu.h
+	"../headers/gstruct.h"
+
+1561920669 source:c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561933561 source:c:\users\andreas\desktop\ddas\cic\algoritimos\typhoon-master\typhoon-master\código e arquivo cbp\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561933561 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561934215 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1561935649 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gstruct.h
+
+1561934416 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\menu.h
+	"../headers/gstruct.h"
+
+1561928317 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561920669 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561934133 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gFile.h"
+
+1561920669 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+

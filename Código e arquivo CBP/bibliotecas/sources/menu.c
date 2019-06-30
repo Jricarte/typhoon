@@ -15,7 +15,6 @@
 #include <string.h>
 #include <windows.h>
 #include "../headers/gfunc.h"
-#include "../headers/gstruct.h"
 #include "../headers/gFile.h"
 
 ///Backend do menu, executa a funcao selecionada pelo usuario
@@ -46,6 +45,31 @@ void menu()
 }
 
 ///Backend do menu, muda a opção selecionada no menu
+
+int moveApontador(char c, int *p) //auxiliar para mudar a posicao do apontador
+{
+
+    int i = *p;
+
+
+    switch(c)
+    {
+        case CIMA:
+            if(i>1)
+            {
+                i--;
+                return i;
+            }break;
+        case BAIXO:
+            if(i<5)
+            {
+                i++;
+                return i;
+            }break;
+    }
+    return i;
+}
+
 int decideMenu()
 {
     int pos = 1; //Posicao do apontador (>)
@@ -60,15 +84,8 @@ int decideMenu()
             c = getch();
             if(c == EXT)
             {
-                c= getch();
-                ///criar função secundaria
-                switch(c)
-                {
-                case CIMA:
-                    if(pos>1) pos--; break;
-                case BAIXO:
-                    if(pos<5) pos++; break;
-                }
+                c = getch();
+                pos = moveApontador(c, &pos); //auxiliar
                 desenhaMenu(pos);
             }
             else if(c == ESP)
@@ -193,18 +210,22 @@ void startGame()
 }
 
 ///Carrega um jogo ja iniciado
+void carregaPeloNome(char nome[]) //auxiliar para pegar o nome com consistencia
+{
+    do
+    {
+        printf("carregue(MAX 10) > ");
+        gets(nome);
+    } while(strlen(nome) > MAX_CHAR_NOME);
+}
+
 void loadGame()
 {
     JOGO game; //Buffer
     char nome[TAM_NOME_ARQUIVO]; //Para leitura do nome do arquivo
     srand(time(0)); //Cria Seed randomica
 
-    ///Criar funcao secundaria
-    do{
-        printf("carregue(MAX 10) > ");
-        gets(nome);
-    } while(strlen(nome) > MAX_CHAR_NOME);
-
+    carregaPeloNome(nome); //pega o nome para carregar o arq
     strcat(nome, ".jag");
 
     //Se der uma mensagem de erro, volta ao menu
@@ -228,25 +249,9 @@ void records()
     leRanking();
 }
 
-void creditos()
+void printaCreditos(char texto[LINHAS][CHARMAX]) //auxiliar
 {
     int linha, coluna;
-    char botao;
-    char texto[LINHAS][CHARMAX] =
-    { //As strings em branco pulam linha
-        "Feito por:",
-        "Andreas Emilio Panzenhagen Franz",
-        "Jordi Pujol Ricarte","",
-        "Professora: Mara Abel",
-        "Monitor: Caua Antunes","",
-        "Materia de Algoritmos e Programacao",
-        "Curso de Ciencia da Computacao",
-        "Universidade Federal do Rio Grande do Sul","",
-        "-----------------------------------------","",
-        "Codigo aberto sob licensa do MIT",
-        "2019","","",
-        "aperte ESPACO para sair"
-    };
 
     for(linha=0; linha<LINHAS; linha++)
     {
@@ -258,6 +263,28 @@ void creditos()
             coluna++;
         }
     }
+}
+
+void creditos()
+{
+    char botao;
+    char texto[LINHAS][CHARMAX] =
+    { //As strings em branco pulam linha
+        "Feito por:",
+        "Andreas Emilio Panzenhagen Franz",
+        "Jordi Pujol Ricarte","",
+        "Professora: Mara Abel",
+        "Monitor: Caua Antunes","",
+        "Cadeira de Algoritmos e Programacao",
+        "Curso de Ciencia da Computacao",
+        "Universidade Federal do Rio Grande do Sul","",
+        "-----------------------------------------","",
+        "Codigo aberto sob licensa do MIT",
+        "2019","","",
+        "aperte ESPACO para sair"
+    };
+
+    printaCreditos(texto);
 
     do{
         botao = getch();

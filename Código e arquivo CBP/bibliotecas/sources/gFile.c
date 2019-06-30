@@ -17,6 +17,28 @@
 #include "../headers/gstruct.h"
 #include "../headers/menu.h"
 ///Salva o arquivo Criado no jogo
+
+void salvaNome(JOGADOR *j)//auxiliar
+{
+    do
+    {
+        cputsxy(POS_X_INTER, LINHA_SALVAR+4, "Insira seu nome(MAX 10) >\n");
+        cputsxy(POS_X_INTER, LINHA_SALVAR+6, ""); //para escrever na linha 16
+        gets(j->nome);
+    } while(strlen(j->nome) > MAX_CHAR_NOME);
+}
+
+void salvaEscolha(char *escolha)//auxiliar
+{
+    cputsxy(POS_X_INTER, LINHA_SALVAR,"Deseja salvar o jogo?\n");
+    cputsxy(POS_X_INTER, LINHA_SALVAR+2,"[S]im\t[N]ao\n");
+    do
+    {
+        *escolha = getch();
+        *escolha = toupper(*escolha);
+    } while (*escolha != 'S' && *escolha != 'N');
+}
+
 void salvaJogo(JOGADOR *j, OBSTACULO merg[], OBSTACULO subInim[], JOGO *game)
 {
     int i;
@@ -24,27 +46,15 @@ void salvaJogo(JOGADOR *j, OBSTACULO merg[], OBSTACULO subInim[], JOGO *game)
 
     clrscr(); //Limpa tela
 
-    ///Criar funcao secundaria
-    cputsxy(POS_X_INTER , LINHA_SALVAR,"Deseja salvar o jogo?\n");
-    cputsxy(POS_X_INTER, LINHA_SALVAR+2,"[S]im\t[N]ao\n");
-    do{
-        escolha=getch();
-        escolha = toupper(escolha);
-    } while (escolha != 'S' && escolha != 'N');
-
+    salvaEscolha(&escolha);//auxiliar para consistencia
     if (escolha == 'S')
     {
-        ///Criar funcao secundaria
-        do{
-            cputsxy(POS_X_INTER, LINHA_SALVAR+4, "Insira seu nome(MAX 10) >\n");
-            cputsxy(POS_X_INTER, LINHA_SALVAR+6, ""); //para escrever na linha 16
-            gets(j->nome);
-        } while(strlen(j->nome) > MAX_CHAR_NOME);
+        salvaNome(j);//auxiliar para pegar o nome com consistencia
         game->jogador = *j;
         for(i=0; i<NUM_MAX_MERG; i++)
             game->mergulhadores[i] = merg[i];
         for(i=0; i<MAXINIM; i++)
-        game->submarinosInim[i] = subInim[i];
+            game->submarinosInim[i] = subInim[i];
         strcpy(nome, j->nome);
         strcat(nome, ".jag");
         criaArq(nome, game);
@@ -170,10 +180,43 @@ int abreRanking(JOGADOR j)
     return montaRanking(arq, j);
 }
 
+void ordenaRank(JOGADOR j, char nomeUsr[], char nome[TAMRANK+1][MAX_CHAR_RANK], int pts[]) //auxiliar
+{
+    int auxInt, ptCompara, i;
+    char auxChar[MAX_CHAR_RANK];
+
+    ptCompara = j.pontos;
+    for(i=0; i<TAMRANK+1; i++)
+    {
+        if(ptCompara > pts[i])
+        {
+            auxInt = pts[i];
+            strcpy(auxChar, nome[i]);
+
+            pts[i] =  ptCompara;
+            strcpy(nome[i], nomeUsr);
+
+            ptCompara = auxInt;
+            strcpy(nomeUsr, auxChar);
+        }
+    }
+}
+
+void salvaRankArq(char nome[TAMRANK+1][MAX_CHAR_RANK], int pts[], FILE *arq)//salva no arquivo - AUXILIAR
+{
+    int i;
+
+    for(i=0; i<TAMRANK-1; i++)
+    {
+        fprintf(arq, "%s,%d\n", nome[i], pts[i]);
+    }
+    fprintf(arq, "%s,%d", nome[i], pts[i]);
+}
+
 int montaRanking(FILE *arq, JOGADOR j)
 {
-    char nomeUsr[MAX_CHAR_RANK], auxChar[MAX_CHAR_RANK ], buffer[BUFFERTXT], nome[TAMRANK+1][MAX_CHAR_RANK]={};
-    int pts[TAMRANK+1]={}, ptCompara, auxInt, i=0;
+    char nomeUsr[MAX_CHAR_RANK], buffer[BUFFERTXT], nome[TAMRANK+1][MAX_CHAR_RANK]={};
+    int pts[TAMRANK+1]={}, i=0;
     clrscr();
 
     //Salva os nomes em array
@@ -193,30 +236,11 @@ int montaRanking(FILE *arq, JOGADOR j)
         } while(strlen(nomeUsr) > MAX_CHAR_RANK-1 || strlen(nomeUsr) <= 0); // -1 para colocar o \n
     }
 
-    //auxiliar
-    ptCompara = j.pontos;
-    for(i=0; i<TAMRANK+1; i++)
-    {
-        if(ptCompara > pts[i])
-        {
-            auxInt = pts[i];
-            strcpy(auxChar, nome[i]);
-
-            pts[i] =  ptCompara;
-            strcpy(nome[i], nomeUsr);
-
-            ptCompara = auxInt;
-            strcpy(nomeUsr, auxChar);
-        }
-    }
+    ordenaRank(j, nomeUsr, nome, pts);
 
     rewind(arq);
-    //salva no arquivo - AUXILIAR
-    for(i=0; i<TAMRANK-1; i++)
-    {
-        fprintf(arq, "%s,%d\n", nome[i], pts[i]);
-    }
-    fprintf(arq, "%s,%d", nome[i], pts[i]);
+
+    salvaRankArq(nome, pts, arq);
 
     fclose(arq);
 

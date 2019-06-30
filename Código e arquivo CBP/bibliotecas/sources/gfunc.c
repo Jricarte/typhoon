@@ -51,6 +51,7 @@ void gameLoop(JOGO game) ///Dividir em subfunções
         do{
 
             khitDetect(&jog, mergulhadores, submarinoInimigo, &torp, &flag);
+
             //Independente do movimento do jogador
             atualizaInfo(&jog, mergulhadores, submarinoInimigo, &torp);
 
@@ -334,7 +335,7 @@ int detectaColisao(JOGADOR j, OBSTACULO obs)
     return 1; //Se nenhum dos if's for verdadeiro, houve colisao
 }
 
-void foraAgua(JOGADOR *j) //Zera o numero de mergulhadores e carrega oxigenio
+void foraAgua(JOGADOR *j) //Zera o numero de mergulhadores, carrega oxigenio e conta os pontos.
 {
     if(j->coord.y < YINICIAL+1)
     {

@@ -12,6 +12,8 @@
 #include <stdio.h>
 
 //Funcoes para salvar o jogo
+void salvaNome(JOGADOR *j);
+void salvaEscolha(char *escolha);
 void salvaJogo(JOGADOR *j, OBSTACULO merg[], OBSTACULO subInim[], JOGO *game);
 int criaArq(char *nome, JOGO *game);
 void gravaArq(FILE *arq, JOGO *buff);
@@ -22,6 +24,8 @@ int carrega(FILE *arq, JOGO *game);
 int leRanking();
 int mostraRanking(FILE *arq);
 //Funcoes para Salvar no Ranking
+void ordenaRank(JOGADOR j, char nomeUsr[], char nome[TAMRANK+1][MAX_CHAR_RANK], int pts[]);
+void salvaRankArq(char nome[TAMRANK+1][MAX_CHAR_RANK], int pts[], FILE *arq);
 int abreRanking(JOGADOR j);
 int montaRanking(FILE *arq, JOGADOR j);
 
