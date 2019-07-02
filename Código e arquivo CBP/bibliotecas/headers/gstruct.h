@@ -16,6 +16,27 @@
 #define CIMA 72
 #define BAIXO 80
 #define ESP 32
+#define ENTER 13
+
+///GFUNC
+//Orientacao
+#define LDO_DIR 1
+#define LDO_ESQ 2
+
+//PONTOS
+#define PTO_SUB 10
+
+#define ATIV 1
+#define DESATIV 0
+
+#define VEL_TORP 2
+
+#define TAM_SUBMARINO 2
+#define TAM_MERG_TORP 1
+
+#define LARG_SUBMARINO 10
+#define LARG_TORP 2
+#define LARG_MERG 4
 
 //constantes de probabilidade e maximo de obstaculos
 #define PROB_NASCE_MERG 0.06
@@ -33,6 +54,18 @@
 #define Y_MIN_OBS 5
 #define X_MAX_OBS 70
 #define Y_MAX_OBS 18
+
+#define LOC_PONTUACAO 13
+#define LOC_VIDAS 16
+#define LOC_CORACAO 9
+#define LOC_OXI_MERG 4
+
+///definicoes para o jogador
+#define JOG_X_INICIAL 35
+#define JOG_Y_INICIAL 3
+#define VIDAS 3
+#define OXIGENIO 30
+#define MAX_MERG_SUB 5
 
 //Posicao de texto
 #define CENTER 37

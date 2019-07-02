@@ -88,7 +88,7 @@ int decideMenu()
                 pos = moveApontador(c, &pos); //auxiliar
                 desenhaMenu(pos);
             }
-            else if(c == ESP)
+            else if(c == ESP || c == ENTER)
             {
                 flag = 0;
                 return pos;
@@ -185,17 +185,17 @@ void startGame()
 {
     JOGO usuario = {
     {
-        {35, YINICIAL}, //coordenadas
-        {9,1}, //dimensoes
+        {JOG_X_INICIAL, JOG_Y_INICIAL}, //coordenadas
+        {LARG_SUBMARINO-1,TAM_SUBMARINO-1}, //dimensoes
         {
             {"  __lxl_",
             ">(_o_o_o)"}, // Submarino direita
             {" _lxl__ ",
             "(o_o_o_)<"} // Sumarino esquerda
         },
-        1, //começa na direita
-        3, //vida
-        30, //oxigenio
+        LDO_DIR, //começa na direita
+        VIDAS, //vida
+        OXIGENIO, //oxigenio
         0, //pontos
         0, //numero de mergulhadores
         YELLOW

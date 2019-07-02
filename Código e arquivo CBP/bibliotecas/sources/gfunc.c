@@ -112,7 +112,7 @@ void khitDetect(JOGADOR *jog, OBSTACULO merg[], OBSTACULO subInim[], OBSTACULO *
 void atualizaInfo(JOGADOR *jog, OBSTACULO merg[], OBSTACULO subInim[], OBSTACULO *torp)
 {
     foraAgua(jog);
-    gotoxy(XFINAL-13,YINICIAL-1);
+    gotoxy(XFINAL-LOC_PONTUACAO,YINICIAL-1);
     printf("%6d pontos", jog->pontos);
 
     loopTorpedo(torp, subInim, jog);
@@ -158,7 +158,7 @@ void arrumaMar(JOGADOR j) //Arruma o teto do cenario quando o sub passar
 {
     int i;
     TELA parede = {{XINICIAL,YINICIAL}, {XFINAL, YFINAL}};
-    if (j.coord.y < YINICIAL + 3) // +3 para que nao redesenhe o mar com o submarino abaixo da linha
+    if (j.coord.y < YINICIAL + TAM_SUBMARINO+1) // +1 para que nao redesenhe o mar com o submarino abaixo da linha
     {
         for(i=parede.ptUm.x; i<parede.ptDois.x; i++)
         {
@@ -177,14 +177,14 @@ void desenhaVidas(JOGADOR j)
     if(j.vidas>0)
     for(i=0, posCoracao=0; i<j.vidas; i++, posCoracao+=3)
     {
-        gotoxy(XFINAL-9+posCoracao,YFINAL+1);
+        gotoxy(XFINAL-LOC_CORACAO+posCoracao,YFINAL+1);
         printf("<3");
     }
 }
 
 void apagaVidas()
 {
-    gotoxy(XFINAL-16, YFINAL+1);
+    gotoxy(XFINAL-LOC_VIDAS, YFINAL+1);
     printf("Vidas:         ");
 }
 
@@ -194,7 +194,7 @@ void desenhaO2(JOGADOR j)
 
     for(i=0; i<j.oxi; i++)
     {
-        gotoxy(XINICIAL+4+i,YFINAL+1);
+        gotoxy(XINICIAL+LOC_OXI_MERG+i,YFINAL+1);
         printf("|");
     }
 }
@@ -211,15 +211,15 @@ void desenhaNmerg(JOGADOR j) //desenha a quantidade de mergulhadores que o jog p
 
     for(i=0; i<j.nMerg; i++)
     {
-        gotoxy(XINICIAL+4+p,YINICIAL-1);
+        gotoxy(XINICIAL+LOC_OXI_MERG+p,YINICIAL-1);
         printf("\\O/");
-        p = p + 4;
+        p = p + LOC_OXI_MERG;
     }
 }
 
 void apagaNmerg()
 {
-    gotoxy(XINICIAL+4,YINICIAL-1);
+    gotoxy(XINICIAL+LOC_OXI_MERG,YINICIAL-1);
     printf("                   ");
 }
 
@@ -289,13 +289,13 @@ void moveJogador(JOGADOR *j,int *flag, OBSTACULO *torp)
                 if(j->coord.x + j->dimen.w < XFINAL-1)
                 {
                     (j->coord.x)++;
-                    j->orientacao = 1;
+                    j->orientacao = LDO_DIR;
                 } break;
             case ESQ:
                 if(j->coord.x > XINICIAL)
                 {
                     (j->coord.x)--;
-                    j->orientacao = 2;
+                    j->orientacao = LDO_ESQ;
                 } break;
             case BAIXO:
                 if(j->coord.y + j->dimen.h < YFINAL-1)
@@ -400,8 +400,8 @@ OBSTACULO iniciaTorpedo(JOGADOR j)
         },
         ///Largura e Altura
         {
-            1, //Largura -1
-            0  //Altura -1
+            LARG_TORP-1, //Largura -1
+            TAM_MERG_TORP-1  //Altura -1
         },
         ///Desenhos
         {
@@ -412,10 +412,10 @@ OBSTACULO iniciaTorpedo(JOGADOR j)
         3, //Tipo 3 - Torpedo
         j.orientacao, //Mesmo lado que o submarino
         WHITE, //Cor branca pro torpedo
-        1 //Status Ativo
+        ATIV //Status Ativo
     };
 
-    if(j.orientacao==2)
+    if(j.orientacao==LDO_ESQ)
     {
         torp.coord.x = j.coord.x-2;
     }
@@ -425,48 +425,48 @@ OBSTACULO iniciaTorpedo(JOGADOR j)
 
 void desenhaTorpedo(OBSTACULO torp)
 {
-    if(torp.status == 1)
+    if(torp.status == ATIV)
     {
-        if(torp.orientacao == 1)
+        if(torp.orientacao == LDO_DIR)
             cputsxy(torp.coord.x, torp.coord.y, torp.imagem.desenhoDir[0]);
-        else if(torp.orientacao == 2)
+        else if(torp.orientacao == LDO_ESQ)
             cputsxy(torp.coord.x, torp.coord.y, torp.imagem.desenhoEsq[0]);
     }
 }
 
 void apagaTorpedo(OBSTACULO torp)
 {
-    if(torp.status == 1)
+    if(torp.status == ATIV)
     {
-        if(torp.orientacao == 1)
+        if(torp.orientacao == LDO_DIR)
             cputsxy(torp.coord.x, torp.coord.y, "  ");
-        else if(torp.orientacao == 2)
+        else if(torp.orientacao == LDO_ESQ)
             cputsxy(torp.coord.x, torp.coord.y, "  ");
     }
 }
 
 void moveTorpedo(OBSTACULO *torp)
 {
-    if(torp->status == 1)
+    if(torp->status == ATIV)
     {
-        if(torp->orientacao == 1)
-            torp->coord.x += 2;
-        else if(torp->orientacao == 2)
-            torp->coord.x -= 2;
+        if(torp->orientacao == LDO_DIR)
+            torp->coord.x += VEL_TORP;
+        else if(torp->orientacao == LDO_ESQ)
+            torp->coord.x -= VEL_TORP;
     }
 }
 
 void bateTorpedoParede(OBSTACULO *torp)
 {
-    if(torp->status == 1)
+    if(torp->status == ATIV)
     {
         if(torp->coord.x <= XINICIAL+1)
         {
-            torp->status = 0;
+            torp->status = DESATIV;
         }
         else if (torp->coord.x + torp->dimen.w >= XFINAL-2)
         {
-            torp->status = 0;
+            torp->status = DESATIV;
         }
     }
 }
@@ -480,7 +480,7 @@ void bateTorpedoSubInim(OBSTACULO *torp, OBSTACULO *sub, JOGADOR *j)
         apagaSubmarino(*sub);
         sub->coord.y = 0;
         sub->status = 0;
-        j->pontos += 10;
+        j->pontos += PTO_SUB;
     }
 }
 
@@ -505,7 +505,7 @@ void inicializaMergulhadores(OBSTACULO *m) //Verifica-se previamente se o obs eh
     m->coord.y = Y_MIN_OBS + (rand()% Y_MAX_OBS); ///certo
     m->coord.x = X_MIN_OBS + (rand()% X_MAX_OBS); ///certo
     m->dimen.h = 0;
-    m->dimen.w = 3;
+    m->dimen.w = LARG_MERG-1;
     m->tipo = 2;
     strcpy(m->imagem.desenhoDir[0], ">-/o\0");
     strcpy(m->imagem.desenhoEsq[0], "o\\-<\0");
@@ -513,22 +513,22 @@ void inicializaMergulhadores(OBSTACULO *m) //Verifica-se previamente se o obs eh
 
     r = rand()/((double)RAND_MAX);
     if( r <= 0.5)
-        m->orientacao = 1;
+        m->orientacao = LDO_DIR;
     else
-        m->orientacao = 2;
+        m->orientacao = LDO_ESQ;
 }
 
 void mudaStatus(OBSTACULO *obs, double prob) //muda o status dos mergulhadores e sub inimigos
 {
     double r;
-    if(obs->status == 0)
+    if(obs->status == DESATIV)
     {
 
         r = rand()/((double)RAND_MAX);
         if( r <= prob)
-            obs->status = 1;
+            obs->status = ATIV;
         else
-            obs->status = 0;
+            obs->status = DESATIV;
     }
 }
 
@@ -536,7 +536,7 @@ void desenhaMergulhador(OBSTACULO obs)
 {
     if(obs.status)
     {
-       if(obs.orientacao == 1)
+       if(obs.orientacao == LDO_DIR)
             cputsxy(obs.coord.x, obs.coord.y, obs.imagem.desenhoDir[0]);
         else
             cputsxy(obs.coord.x, obs.coord.y, obs.imagem.desenhoEsq[0]);
@@ -545,7 +545,7 @@ void desenhaMergulhador(OBSTACULO obs)
 
 void apagaMergulhador(OBSTACULO m)
 {
-    if(m.status == 1)
+    if(m.status == ATIV)
         cputsxy(m.coord.x, m.coord.y, "    ");
 }
 
@@ -568,8 +568,8 @@ void atualizaStatusMergulhador(JOGADOR *j, OBSTACULO *obs) //pega os mergulhador
     if(detectaColisao(*j, *obs))
     {
 
-        if(obs->status == 1 && j->nMerg < NUM_MAX_MERG){
-            obs->status = 0;
+        if(obs->status == ATIV && j->nMerg < MAX_MERG_SUB){
+            obs->status = DESATIV;
             cputsxy(obs->coord.x, obs->coord.y, "    ");
             j->nMerg++;
             desenhaNmerg(*j);
@@ -579,18 +579,18 @@ void atualizaStatusMergulhador(JOGADOR *j, OBSTACULO *obs) //pega os mergulhador
 
 void moveMergulhador(OBSTACULO *m)
 {
-    if(m->orientacao == 1) //Se o mergulhador for para direita
+    if(m->orientacao == LDO_DIR) //Se o mergulhador for para direita
         m->coord.x++;
-    else if(m->orientacao == 2) //Se o mergulhador for para esquerda
+    else if(m->orientacao == LDO_ESQ) //Se o mergulhador for para esquerda
         m->coord.x--;
 }
 
 void bateMergulhadorParede(OBSTACULO *obs) //muda a direcao do mergulhador quando bate na parede
 {
     if(obs->coord.x + obs->dimen.w == XFINAL-1)
-        obs->orientacao = 2;
+        obs->orientacao = LDO_ESQ;
     else if(obs->coord.x == XINICIAL)
-        obs->orientacao = 1;
+        obs->orientacao = LDO_DIR;
 }
 
 void funcoesLoopMerg(JOGADOR *jog,OBSTACULO mergulhadores[]) //Faz todas as funcoes de mergulhadores
@@ -612,8 +612,8 @@ void inicializaSubInimigo(OBSTACULO *subI) //Verifica-se previamente se o obs eh
 {
     double r;
     subI->coord.y = (Y_MIN_OBS) + (rand()% (Y_MAX_OBS-2)); ///certo
-    subI->dimen.h = 1;
-    subI->dimen.w = 9;
+    subI->dimen.h = TAM_SUBMARINO-1;
+    subI->dimen.w = LARG_SUBMARINO-1;
     subI->tipo = 1;
     strcpy(subI->imagem.desenhoDir[0], "  __lxl_\0");
     strcpy(subI->imagem.desenhoDir[1], ">{_0_0_0}\0");
@@ -624,12 +624,12 @@ void inicializaSubInimigo(OBSTACULO *subI) //Verifica-se previamente se o obs eh
     r = rand()/((double)RAND_MAX);
     if( r <= 0.5)
     {
-        subI->orientacao = 1;
+        subI->orientacao = LDO_DIR;
         subI->coord.x = X_MIN_OBS; ///certo
     }
     else
     {
-        subI->orientacao = 2;
+        subI->orientacao = LDO_ESQ;
         subI->coord.x = X_MAX_OBS-1; ///certo
     }
 }
@@ -640,7 +640,7 @@ void desenhaSubInimigo(OBSTACULO obs) ///ok
 
     if(obs.status)
     {
-        if(obs.orientacao == 1)
+        if(obs.orientacao == LDO_DIR)
         {
             cputsxy(obs.coord.x, obs.coord.y, obs.imagem.desenhoDir[0]);
             cputsxy(obs.coord.x, obs.coord.y+1, obs.imagem.desenhoDir[1]);
@@ -682,12 +682,12 @@ void bateInimigo(JOGADOR *j, OBSTACULO *obs)
 {
     if(detectaColisao(*j, *obs))
     {
-        if(obs->status == 1)
+        if(obs->status == ATIV)
         {
             j->nMerg = 0;
             apagaJogador(*j);
-            j->coord.x = 35;
-            j->coord.y = YINICIAL;
+            j->coord.x = JOG_X_INICIAL;
+            j->coord.y = JOG_Y_INICIAL;
             desenhaJogador(*j);
             j->vidas--;
             desenhaVidas(*j);
@@ -700,9 +700,9 @@ void bateInimigo(JOGADOR *j, OBSTACULO *obs)
 void bateParedeSubmarino(OBSTACULO *obs)
 {
     if(obs->coord.x + obs->dimen.w == XFINAL-1)
-        obs->orientacao = 2;
+        obs->orientacao = LDO_ESQ;
     else if(obs->coord.x == XINICIAL)
-        obs->orientacao = 1;
+        obs->orientacao = LDO_DIR;
 
 }
 
@@ -710,9 +710,9 @@ void moveSubInimigo(OBSTACULO *obs) //ok
 {
     if(obs->status)
     {
-        if(obs->orientacao == 1) //Se o mergulhador for para direita
+        if(obs->orientacao == LDO_DIR) //Se o mergulhador for para direita
             obs->coord.x++;
-        else if(obs->orientacao == 2) //Se o mergulhador for para esquerda
+        else if(obs->orientacao == LDO_ESQ) //Se o mergulhador for para esquerda
             obs->coord.x--;
     }
 }

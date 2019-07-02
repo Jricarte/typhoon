@@ -675,7 +675,7 @@
 	"../headers/gstruct.h"
 	"../headers/menu.h"
 
-1561933561 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfile.c
+1561937667 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfile.c
 	"../headers/gFile.h"
 	<stdio.h>
 	<stdlib.h>
@@ -690,12 +690,12 @@
 	"gstruct.h"
 	<stdio.h>
 
-1561937249 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gstruct.h
+1561959733 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gstruct.h
 
 1561934416 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\menu.h
 	"../headers/gstruct.h"
 
-1561928317 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfunc.c
+1561959696 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\gfunc.c
 	"../headers/gfunc.h"
 	<conio2.h>
 	<time.h>
@@ -707,7 +707,7 @@
 1561920669 c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\headers\gfunc.h
 	"gstruct.h"
 
-1561934133 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\menu.c
+1561959522 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\bibliotecas\sources\menu.c
 	"../headers/menu.h"
 	<stdio.h>
 	<stdlib.h>
@@ -719,6 +719,54 @@
 	"../headers/gFile.h"
 
 1561936577 source:c:\users\pujol\documents\programacao\c\franz-ricarte\código e arquivo cbp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./bibliotecas/headers/menu.h"
+
+1561937667 source:c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\sources\gfile.c
+	"../headers/gFile.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"../headers/gstruct.h"
+	"../headers/menu.h"
+
+1561934215 c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\headers\gfile.h
+	"gstruct.h"
+	<stdio.h>
+
+1562105110 c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\headers\gstruct.h
+
+1561934416 c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\headers\menu.h
+	"../headers/gstruct.h"
+
+1561959696 source:c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\sources\gfunc.c
+	"../headers/gfunc.h"
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gstruct.h"
+	"../headers/gFile.h"
+
+1561920669 c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\headers\gfunc.h
+	"gstruct.h"
+
+1561959522 source:c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\bibliotecas\sources\menu.c
+	"../headers/menu.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio2.h>
+	<time.h>
+	<string.h>
+	<windows.h>
+	"../headers/gfunc.h"
+	"../headers/gFile.h"
+
+1561936577 source:c:\users\pujol\documents\programacao\c\franz_ricarte\código e arquivo cbp\main.c
 	<stdio.h>
 	<stdlib.h>
 	"./bibliotecas/headers/menu.h"
