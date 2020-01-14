@@ -1,4 +1,4 @@
-﻿# typhoon
+﻿### TYPHOON
 Jogo feito com &lt;3 em C
 
 Compativel com Windows, em fase alfa
