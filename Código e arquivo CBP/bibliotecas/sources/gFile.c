@@ -1,8 +1,10 @@
 /**
-    Biblioteca de Funcoes de arquivo
+    Biblioteca de Funcoes de ARQUIVO
     -------------------------------------------------
     Aqui sao declaradas todas as funcoes relacionadas
     a abrir ou gravar algum arquivo no jogo
+    
+    Sim, aqui temos datas
 **/
 
 //Header game File
@@ -146,6 +148,7 @@ int mostraRanking(FILE *arq)
 
         switch(pts[i])
         {
+        // alguns anos que como referencia, muda cor do recorde
         case 1917:
             textcolor(RED); break;
         case 1863:
